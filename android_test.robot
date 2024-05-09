@@ -9,7 +9,7 @@ ${deviceName}    2111053a31057ece
 ${platformVersion}    10.0
 ${udid}    2111053a31057ece
 ${automationName}    UiAutomator2
-${URI}    http://192.168.0.27:4723/wd/hub
+${URI}    http://127.0.0.1:4723/wd/hub
 
 *** Test Cases ***
 Launch App

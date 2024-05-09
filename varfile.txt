@@ -1,0 +1,3 @@
+--variablefile varpy.py
+--suite robotframework-tests.android_test
+.
