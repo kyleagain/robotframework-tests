@@ -5,3 +5,5 @@ __pycache__
 *.html
 *.xml
 robotframework_test.iml
+varfile.txt
+varpy.py
