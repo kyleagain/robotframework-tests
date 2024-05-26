@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/kyleagain/robotframework-tests.git', branch: 'main'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                sh 'echo "Building..."'
+                // 예: sh './build.sh'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                sh 'echo "Running tests..."'
+                // 예: sh './run-tests.sh'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying..."'
+                // 예: sh './deploy.sh'
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed.'
+        }
+    }
+}
