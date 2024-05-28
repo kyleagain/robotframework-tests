@@ -8,24 +8,9 @@ pipeline {
             }
         }
         
-        stage('Build') {
-            steps {
-                sh 'echo "Building..."'
-                // 예: sh './build.sh'
-            }
-        }
-        
         stage('Test') {
             steps {
-                sh 'echo "Running tests..."'
-                // 예: sh './run-tests.sh'
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploying..."'
-                // 예: sh './deploy.sh'
+                sh 'python3 -m robot.run --variablefile "varpy.py" "android_test.robot"'
             }
         }
     }
